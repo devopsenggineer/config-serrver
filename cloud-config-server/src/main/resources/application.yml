@@ -10,3 +10,12 @@ spring:
         git:
           uri: https://github.com/sysadmin-imran/cloud-config
           clone-on-start: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://service-registry:8761/eureka/
+  instance:
+    hostname: service-registry
