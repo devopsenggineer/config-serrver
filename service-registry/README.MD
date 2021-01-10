@@ -7,9 +7,13 @@ mvn clean install
 
 sudo docker build -t service-registry .
 
-# Step 3: Deploy the image
+# Step 3: Create docker network micro
+sudo docker network create micro
 
-sudo docker run -d -p 8761:8761 --name service-registry service-registry
+# Step 4: Deploy the image
+sudo docker run -d -p 9411:9411 --network micro -h zipkin --name zipkin openzipkin/zipkin
 
-# Step 4: Check in the browser this url http://127.0.0.1:8761
+sudo docker run -d -p 8761:8761 --network micro -h service-registry --name service-registry service-registry
+
+# Step 5: Check in the browser this url http://127.0.0.1:8761
 

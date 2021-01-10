@@ -33,7 +33,7 @@ spring:
                 fallbackuri: forward:/departmentServiceFallBack
 
 
-hystrix:
+hystrix:  
   command:
     fallbackcmd:
       execution:
@@ -45,8 +45,10 @@ hystrix:
 management:
   endpoints:
     web:
+#      base-path: /
       exposure:
-        include: hystrix.stream
+        include: "*"
+#        include: hystrix.stream
 
 
 #eureka:

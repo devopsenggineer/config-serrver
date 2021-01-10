@@ -9,7 +9,7 @@ sudo docker build -t cloud-config-server .
 
 # Step 3: Deploy the image
 
-sudo docker run -d -p 9296:9296 --name cloud-config-server cloud-config-server
+sudo docker run -d -p 9296:9296  --network micro -h cloud-config-server  --name cloud-config-server cloud-config-server
 
 # Step 4: Check in the browser this url http://127.0.0.1:9296
 
