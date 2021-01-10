@@ -8,5 +8,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sysadmin-imran/config-serrver
+          uri: https://github.com/sysadmin-imran/cloud-config
           clone-on-start: true
