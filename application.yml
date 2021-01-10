@@ -6,3 +6,8 @@ eureka:
       defaultZone: http://service-registry:8761/eureka/
   instance:
     hostname: service-registry
+
+#      defaultZone: http://sachin:8761/eureka/
+#  instance:
+#    hostname: sachin
+
